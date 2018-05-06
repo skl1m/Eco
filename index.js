@@ -1,22 +1,7 @@
-/* eslint-disable  func-names */
-/* eslint quote-props: ["error", "consistent"]*/
-/**
- * This sample demonstrates a simple skill built with the Amazon Alexa Skills
- * nodejs skill development kit.
- * This sample supports multiple lauguages. (en-US, en-GB, de-DE).
- * The Intent Schema, Custom Slots and Sample Utterances for this skill, as well
- * as testing instructions are located at https://github.com/alexa/skill-sample-nodejs-fact
- **/
 
 'use strict';
 const Alexa = require('alexa-sdk');
 
-//=========================================================================================================================================
-//TODO: The items below this comment need your attention.
-//=========================================================================================================================================
-
-//Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
-//Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
 const APP_ID = 'amzn1.ask.skill.32b6b356-3e3b-4816-8d2f-cfee6645bb93';
 
 const SKILL_NAME = 'Eco';
@@ -27,9 +12,6 @@ const HELP_MESSAGE = 'You can say give me a sustainability tip for the home, wor
 const HELP_REPROMPT = 'Can you repeat that?';
 const STOP_MESSAGE = 'Goodbye!';
 
-//=========================================================================================================================================
-//TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/data
-//=========================================================================================================================================
 const Homedata = [
     'Swap all CFL bulbs for LED in house because LEDs are 90 percent efficient, contain no harmful gases, and can last up to 20 years.',
     'Wait until you have full load for laundry. Also, do laundry on cold wash.It not only extends the lifespan and vibrancy of her clothing it also saves 90% of the energy that would have been used to heat the water.',
@@ -68,9 +50,7 @@ const workData = [
      'Purchase paper with the highest percentage of recycled materials that copier performance allows.',
      
      ];
-//=========================================================================================================================================
-//Editing anything below this line might break your skill.
-//=========================================================================================================================================
+
 
 const handlers = {
     'LaunchRequest': function () {
