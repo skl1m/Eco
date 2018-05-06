@@ -21,11 +21,11 @@ exports.handler = function (event, context, callback) {
 //Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
 const APP_ID = 'amzn1.ask.skill.53bd6ab6-3e82-40e5-9411-7b5f714d135d';
 
-const SKILL_NAME = 'Eco';
+const SKILL_NAME = 'eco';
 const GET_FACT_MESSAGE = "Here's your eco-friendly tip: ";
 const HELP_MESSAGE = 'You can say give me a sustainability tip, or, you can say exit... What can I help you with?';
 const HELP_REPROMPT = 'What can I help you with? You can say things like give me a random eco tip.';
-const STOP_MESSAGE = 'Thank you for trying Eco Pal. Keep in mind that: we do not inherit the earth from our ancestors, we borrow it from our children. Goodbye!';
+const STOP_MESSAGE = 'Thank you for trying Eco Pal!';
 const WELCOME_MESSAGE = 'Welcome to ' + SKILL_NAME + '. You can ask a question like, give me a random eco tip?... Now, what can I help you with?';
 const WELCOME_REPROMPT= "For instructions on what you can say, please say help me.";
 
@@ -56,7 +56,21 @@ const ECO_TIPS = [
     'Choose Fair Trade certified goods when possible to support companies dedicated to sustainable production and paying laborers a fair wage.',
     'Skip the bottled water. Bottled water companies try to give tap water a bad name, even though the water from your faucet is practically free and most city water has won quality and tests against name-brand water.',
     'Choose to have a smaller family. More people in the world = more demands for resources.',
-    'Growing herbs on a windowsill can save you hundreds in the long run.'
+    'Growing herbs on a windowsill can save you hundreds in the long run.',
+    'Boycott products that endager wildlife. Products made from animals on the endangered species list are illegal to buy, sell, import or trade in the United States, but if a plant or animal hasn’t been listed yet, they can still be harmed for someone’s profit.',
+    'Walk, bike, carpool or use public transportation whenever possible. Combine errands to make fewer trips.',
+    'Just as keeping your car in shape improves your fuel efficiency, keeping your home in shape improves your energy efficiency.',
+    'If you\'re not using an electronic device, unplug it -- that\'s the blanket approach to fighting vampire power. You can make this step even easier with a surge protector or power strip.',
+    'Use waterless car wash to wash your car or bike.',
+    'Read magazines, newspapers and other publications online.',
+    'Unplug at least once a day so that you can enjoy nature and the environment around'
+];
+
+const ECO_QUOTES = [
+    'Remember we do not inherit the earth from our ancestors, we borrow it from our children',
+    'The marks humans leave are too often scars',
+    'The earth has music for those who listen',
+    'Be the change you wish to see in this world'
 ];
 
 const handlers = {
@@ -88,16 +102,26 @@ const handlers = {
         const speechOutput = HELP_MESSAGE;
         const reprompt = HELP_REPROMPT;
 
-        this.emit(':ask', speechOutput, reprompt)
+        this.response.speak(speechOutput).listen(reprompt);
+        this.emit(':responseReady');
     },
     'AMAZON.StopIntent': function () {
+        this.response.speak(STOP_MESSAGE);
         this.emit('SessionEndedRequest');
     },
     'AMAZON.CancelIntent': function () {
-        this.emit('SessionEndedRequest');
+        this.response.speak(STOP_MESSAGE)
+        this.emit(':responseReady');
     },
     'SessionEndedRequest':function () {
-        this.emit(':tell', STOP_MESSAGE);
+        //Declares the factArray
+        const quotesArr = ECO_QUOTES;
+        //Gets a random index to use on the data set of random facts
+        const quoteIndex = Math.floor(Math.random() * quotesArr.length);
+        //Gets a random fact
+        const randomQuote = quotesArr[quoteIndex];
+        const speechOutput = STOP_MESSAGE + randomQuote + "..... Goodbye!";
+        this.emit(':tell', speechOutput);
     }
 };
 
