@@ -8,3 +8,8 @@ If you're interested in finding the current documentation for our project, pleas
 * Gives information regarding whether certain items are recycable, compostable, or trashed. 
 We currently have 3 different use cases for our skill. Within these use cases, there's still some tidying up to do. 
 ## To Do List
+* Add comments to current code
+* Make sure tips are only given when asked
+* Add ability to retrieve closest recycling centers, or places that accepts compost, or any locations relevant to sustainability
+* Random facts related to climate change
+* Consider Dr. Penzenstadler's recommendation about how facts should be releveant to your current weather. For instance one of our tips was to plant herbs in your window sill and Dr. Penzenstadler thinks that wouldn't be useful to someone who lives in a primarily freezing climate. 
