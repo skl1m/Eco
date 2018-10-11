@@ -9,7 +9,7 @@ exports.handler = function (event, context, callback) {
     alexa.execute();
 };
 
-const APP_ID = 'amzn1.ask.skill.53bd6ab6-3e82-40e5-9411-7b5f714d135d';
+const APP_ID = 'amzn1.ask.skill.[ENTER YOUR OWN SKILL ID]';
 
 const SKILL_NAME = 'eco pal';
 //Message outputted by Alexa when user utters help
