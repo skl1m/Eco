@@ -20,15 +20,36 @@ const HELP_REPROMPT_RECYCLE = 'What can I help you with? You can say something l
 const GET_LOCATION_FACT_MESSAGE = "Here is a ";
 //Message outputted when user ask for a random eco-friendly tip
 const GET_RANDOM_TIP_MESSAGE = "Here's your eco-friendly tip: ";
+//Message outputted when user ask for a random eco-friendly tip
+const GET_RANDOM_FACT_MESSAGE = "Did you know that";
 //Message outputted when user needs help during skill's session
 const HELP_MESSAGE = 'You can say give me a sustainability tip, how do I recycle batteries or, you can say exit... What can I help you with?';
 //Message outputted by Alexa to reprompt user about random tips
 const HELP_REPROMPT = 'What can I help you with? You can say things like give me a random eco tip or give me a work related sustainability tip';
+//Message outputted by Alexa when the skill ends or is requested to stop
 const STOP_MESSAGE = 'Thank you for trying Eco Pal!';
-const WELCOME_MESSAGE = 'Welcome to ' + SKILL_NAME + '. You can ask a question like, give me a random eco tip?... Is a book recycable? Now, what can I help you with?';
+//Message outputted by Alexa in the beginning
+const WELCOME_MESSAGE = 'Welcome to ' + SKILL_NAME + ', a place for friends of our environment.';
+//Message outputted by Alexa to help users on what they say
+const INSTRUCTION_MESSAGE = 'To learn how you can help, you can ask a question like, give me a random eco tip?... Is a book recyclable? Now, what can I help you with?';
+//Message outputted by Alexa to reprompt the users if the skill has been idle
 const WELCOME_REPROMPT= "For instructions on what you can say, please say help me.";
+//Message outputted by Alexa to help users with the tips based on location intent 
 const HELP_MESSAGE_LOCATION = 'You can say give me a sustainability tip for the home, work or school, or, you can say exit... What can I help you with?';
 
+
+/*
+ * Array containing random environmental related facts.
+*/
+const ECO_FACTS = [
+    'Temperatures are breaking records around the world. The 21st century has seen the most temperature records broken in recorded history.',
+    'There is no scientific debate about the reality of climate change. Multiple studies show that a massive 97 per cent of researchers believe global warming is happening and that they agree that trends observed over the last past century are probably due to human activity.',
+    'Arctic sea ice and glaciers are melting. Arctic sea ice coverage has shrunk every decade since 1979 by 3.5 to 4.1 per cent.',
+    'Sea levels are rising at their fastest rate in 2,000 years. Rising sea levels is caused primarily by the added water from melting ice sheets and glaciers, as well as the expansion of sea water as it warms.',
+    'Climate change will lead to a refugee crisis. Displacement of people as a direct result is not a hypothetical, it\'s already happening. An average of 21.5 million people have been forcibly displaced since 2008 due to climate changed-related weather hazards, according to the United Nations High Commissioner For Refugees.',
+    'Two-thirds of the Great Barrier Reef has been damaged by cloral bleaching as a result of climate change. This occurs when algae living within the coral tissue are expelled, usually as a result of water temperatures being too high.'
+    ];
+    
 /*
  * Array containing random environmental related quotes.
 */
@@ -208,7 +229,20 @@ const handlers = {
         //this.response.speak(HELP_MESSAGE).listen();
         //this.emit(':responseReady');
 
-       this.emit(':ask', WELCOME_MESSAGE, WELCOME_REPROMPT);
+        //Declares the factArray
+        const factArr = ECO_FACTS;
+        //Gets a random index to use on the data set of random facts
+        const factIndex = Math.floor(Math.random() * factArr.length);
+        //Gets a random fact
+        const randomFact = factArr[factIndex];
+        //Sets the speech output to have the 
+        //Set message concatenated with the random fact
+        const EcoFactSpeechOutput = GET_RANDOM_FACT_MESSAGE + randomFact;
+        
+        //Sets the welcome message to include a random eco fact to open the skill with
+        const welcomeMessage = WELCOME_MESSAGE + EcoFactSpeechOutput + INSTRUCTION_MESSAGE; 
+    
+        this.emit(':ask', welcomeMessage, WELCOME_REPROMPT);
        
     },
      'RandomEcoTipIntent': function () {
@@ -357,4 +391,3 @@ const handlers = {
         this.emit(':tell', speechOutput);
     }
 };
-
