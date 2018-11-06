@@ -1,3 +1,6 @@
+/*
+Reading database information from dynamoDB to Lambda function
+*/
 var AWS = require("aws-sdk");
 var docClient = new AWS.DynamoDB.DocumentClient();
 
