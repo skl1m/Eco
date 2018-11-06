@@ -9,7 +9,11 @@ exports.handler = function (event, context, callback) {
     alexa.execute();
 };
 
-const APP_ID = 'amzn1.ask.skill.53bd6ab6-3e82-40e5-9411-7b5f714d135d';
+/*
+* Fill in the APP ID by going to the amazon developer console, then going into the alexa
+* skill you are working with, clicking the endpoint tab, and copying your skill ID
+*/
+const APP_ID = 'FILL_IN_THE_APP_ID';
 
 const SKILL_NAME = 'eco pal';
 //Message outputted by Alexa when user utters help
@@ -99,9 +103,10 @@ const ECO_TIPS = [
     'Find alternatives to mail. Avoid printing on paper when a phone call, email, or text will do.'
 ];
 
- //Array to store recycling information about different types of s
- // entries are case sensitive even though we convert with toLowerCase()
- //TODO: need to find out why multiple word s are not being recognized
+ /* Array to store recycling information about different types of s
+  * entries are case sensitive even though we convert with toLowerCase()
+  * TODO: need to find out why multiple word s are not being recognized
+ */
  var data = {
     "paper": "paper is recyclable includes craft paper, mixed paper, newspapers, newspapers inserts, cleaner office paper, packing paper wrapping paper",
     "book" :"Text books and other books can be donated if they are current. Otherwise, hardcover and paperback books are both recycleable.",
@@ -183,6 +188,9 @@ const ECO_TIPS = [
     "Cans" : "steel Cans and Tin cans  are recyclable"*/
 };
 
+/*
+* An array of sustainability tips related to home
+*/
 const HOME_TIPS= [
     'Swap all CFL bulbs for LED in house because LEDs are 90 percent efficient, contain no harmful gases, and can last up to 20 years.',
     'Wait until you have a full load for laundry on cold wash. It not only extends the lifespan and vibrancy of your clothing it also saves 90% of the energy that would have been used to heat the water.',
@@ -193,6 +201,9 @@ const HOME_TIPS= [
     'If you live in an apartment or have a home elevator, opt to take stairs ..... It\'s good for your health and a good way to save some kWh!'
   ];
 
+/*
+* An array of sustainability tips related to work
+*/
 const WORK_TIPS = [
     'Recycle all of your used printer toner or ink cartridges.',
     'Establish a stationery reuse system accessible by staff to avoid throwing functioning stationery away.',
@@ -208,6 +219,9 @@ const WORK_TIPS = [
     'Install low flow faucet aerators on your bathroom and kitchen sinks to reduce your water usage'
     ];
 
+/*
+* An array of sustainability tips related to school 
+*/
  const SCHOOL_TIPS = [
      'Bring your food and drink in reusable containers',
      'Don \'t pack excess food that you will throw away.',
