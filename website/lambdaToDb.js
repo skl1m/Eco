@@ -2,11 +2,13 @@
 Reading database information from dynamoDB to Lambda function
 */
 var AWS = require("aws-sdk");
+// declare and initialize dynamoDB database object.
 var docClient = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = (event,context, callback) => {
     console.log("PARAMS---:" + parseInt(event.params.querystring.location));
     
+	// pull information from specific table based on specific primary key.
     var params = {
         TableName : "Sustainibility_location_info",
         Key :{
@@ -14,6 +16,7 @@ exports.handler = (event,context, callback) => {
         }
     };
     
+	// display error if data is invalid.otherwise, display result.
     docClient.get(params, function(err,data){
         if(err)
         {
@@ -26,6 +29,7 @@ exports.handler = (event,context, callback) => {
     });
 };
 
+// path queryset up for testing.
 {
 
 "body-json":{}
