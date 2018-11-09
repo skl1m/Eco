@@ -16,10 +16,14 @@
 				</ul>				
 			</nav>
 		</header>
+		<!-- display result based on click event-->
 		<div class ="row">
-			<div class ="col">Sustainable at Home</div>
-			<div class ="col">Sustainable at Work</div>
-			<div class ="col">Recycling Material</div>
+			<button class = "button" type="button" onclick='document.getElementById("demo").innerHTML = "Reading Random tips"'>Random Tip</button>
+			<button class = "button" type="button" onclick='document.getElementById("demo").innerHTML = "Sustainable at Home"'>Sustainable at Home</button>
+			<button class = "button" type="button" onclick='document.getElementById("demo").innerHTML = "Sustainable at Work"'>Sustainable at Work</button>
+			<button class = "button" type="button" onclick='document.getElementById("demo").innerHTML = "Sustainable at School"'>Sustainable at School</button>
+			<button class = "button" type="button" onclick='document.getElementById("demo").innerHTML = "Recycling Material"'>Recycling Material</button>
 		<div/>
+		<p id="demo"></p>
 	</body>
 </html>
