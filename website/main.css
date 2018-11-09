@@ -1,6 +1,12 @@
+/*
+provide style to html file.
+*/
 body{
 	margin: 0;
 }
+/*
+header style.
+*/
 header
 	{
 		background: Green;
