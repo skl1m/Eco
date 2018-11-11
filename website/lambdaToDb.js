@@ -1,5 +1,6 @@
 /*
 Reading database information from dynamoDB to Lambda function
+created by Maulik Patel
 */
 var AWS = require("aws-sdk");
 // declare and initialize dynamoDB database object.
