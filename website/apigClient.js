@@ -1,5 +1,6 @@
 /*
  * To configure the API Gateway
+ created by Maulik Patel
  */
 
 var apigClientFactory = {};
