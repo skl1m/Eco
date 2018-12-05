@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Developer Guide</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.5.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<!-- Link HTML to CSS file -->
+	<link rel="stylesheet" type="text/css" href="ecoDevGuide.css">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+ <body>
+ 		<!-- Create navigation bar using Bootstrap -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="ecoHomepage.html">Eco</a>
+    </div>
+    <!-- Create buttons for navigation bar -->
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About
+      </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="ecoAbout.html">About Us</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="ecoUserManual.html">Eco User Manual</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="ecoDevGuide.html">Developer Guide</a>
+        </div>
+        <li><a href="#contact">Leaderboard</a></li>
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sustainability Information <i class="fas fa-caret-square-down"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Sustainability at Home</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Sustainability at Work</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Sustainability at School</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">General Sustainability Tips</a>
+        </div>
+        <li><a href="ecoContact.html">Contact</a></li>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </div>
+ </nav>
+
+	<h1>
+		Eco Developer Guide
+	</h1> 
+	<p>
+		Amazon Alexa is a voice interactive platform that we used to develop our own skill. The skill includes: providing user eye-opening sustainability facts, providing users tips on sustainable living at home, work and school, providing user information on how to recycle certain materials, and provide user the closest recycling centers.
+	</p>
+
+	<h2> 
+		<b> 
+		Features 
+		</b>
+	</h2> 
+    
+	<ol>
+	    <li> Interact with user to answer their question related to sustainability.</li>
+	    <li> Add most frequently asked question on website, so we can update our database by adding more information. And make it available on website for user.</li>
+	    <li>Provide "eco" challenges, which are tasks that we can assign to users to teach them how to live more sustainably.</li>
+	</ol>
+	    
+	<h2> 
+		<b> How to Install  </b>
+	</h2> 
+	<ol>
+	    <li> Download Alexa application.</li>
+	    <li> Search for Alexa skills on the Amazon website.</li>
+	    <li> Enable Skill by saying enable “skill name”.</li>
+	    <li> To Enable Alexa skill: </li>
+	    <ol type= "i">
+	    	<li> Select the menu on skills, or go to the Alexa skills store on the Amazon website: <a href="https://www.amazon.com/skills"></a>https://www.amazon.com/skills.</li>
+	    	<li> Open the skill detail when you find a skill.</li>
+	    	<li> Select the Enable skill option, or ask Alexa to open the skill.</li>
+	    </ol>
+	</ol>
+
+	<h2> 
+		<b> 
+			Components and Technologies used
+		</b>
+	</h2>
+
+	<ol>
+	    <li>Hardware: - Alexa capable device</li>
+	    <li> Service: - AWS Lambda</li>
+	    <li> Database: - Dynamodb </li>
+	    <li> Languages: - Node.js, HTML, CSS</li>
+	</ol>
+
+	<h3> 
+		<b> How to contribute?
+		</b>
+	</h3>
+	<p> 
+		All the files and code will be posted on our <a href="https://github.com/skl1m/ecopal">GitHub page.</a>
+    </p>
+
+	<h3> 
+		<b> Support Provided </b>
+	</h3>
+
+	<p> 
+    Please Contact us at “eco.thealexaskill@gmail.com” by email to contact development team if there are any errors or suggestions for improvement for Eco the Alexa skill.
+    </p>
+
+    <img src="https://i.imgur.com/IfkoyOa.png" > 
+	<!-- Include scripts at the end of the HTML file to ensure they run after the page has loaded -->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

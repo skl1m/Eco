@@ -1,0 +1,37 @@
+/*Display background image and resize to fill up the entire window*/
+body {
+    background: url(https://images.unsplash.com/photo-1507576566681-1932a6a38099?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=53ef2e261b3d2ae642294a4e87bd19e4&auto=format&fit=crop&w=1334&q=80);
+    background-size: cover;
+    background-position: center; 
+    font-size: 16px;
+}
+
+/*Set "Lato" font family for the entire HTML file*/
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: "Lato";
+    color: white;
+}
+
+
+.content{
+	padding-top: 11%;
+	text-align: center;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+hr {
+    width: 350px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+a.dropdown-item{
+    text-align: center;
+    color: #369628;
+    margin-left: 23px;
+    margin-right: 15px;
+}

@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+
+/*Create border around entire body of HTML file and set font family*/
+body {
+  width: 90%;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+h1 {
+    color: #369628;
+    font-size: 60px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 64px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #369628;
+    word-wrap: normal;
+    letter-spacing: -1px;
+    /*text-align: center;*/
+}
+/*Set font style for h2 headings*/
+h2 {
+  font-size: 32px;
+  line-height: 32px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+h3{
+    font-size: 25px;
+    line-height: 28px;
+    color: #369628;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.top_banner {
+    max-width: 90%
+    margin: 20px 0 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0;
+}
+
+.center {
+   text-align: center;
+}
+
+a.dropdown-item{
+    text-align: center;
+    color: #369628;
+    margin-left: 25px;
+    margin-right: 20px;
+}
