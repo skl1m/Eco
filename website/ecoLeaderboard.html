@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <title>Leaderboard</title>
+    <!-- Link Bootstrap stylesheets to HTML file for CSS stylings and link "Lato" font family from Google fonts -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.5.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Link HTML to CSS file -->
+  <link rel="stylesheet" type="text/css" href="ecoLeaderboard.css">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+
+  <!-- Create navigation bar using Bootstrap -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="ecoHomepage.html">Eco</a>
+    </div>
+    <!-- Create buttons for navigation bar -->
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About
+      </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="ecoAbout.html">About Us</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="ecoUserManual.html">Eco User Manual</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="ecoDevGuide.html">Developer Guide</a>
+        </div>
+        <li><a href="#contact">Leaderboard</a></li>
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sustainability Information <i class="fas fa-caret-square-down"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Sustainability at Home</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Sustainability at Work</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Sustainability at School</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">General Sustainability Tips</a>
+        </div>
+        <li><a href="ecoContact.html">Contact</a></li>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </div>
+ </nav>
+
+ <h1>Leaderboard</h1>
+ 
+ 
+<p id="demo"></p>
+
+	<script type="text/javascript" src="axios.standalone.js"></script>
+    <script type="text/javascript" src="hmac-sha256.js"></script>
+    <script type="text/javascript" src="sha256.js"></script>
+    <script type="text/javascript" src="hmac.js"></script>
+    <script type="text/javascript" src="enc-base64.js"></script>
+    <script type="text/javascript" src="url-template.js"></script>
+    <script type="text/javascript" src="sigV4Client.js"></script>
+    <script type="text/javascript" src="apiGatewayClient.js"></script>
+    <script type="text/javascript" src="simpleHttpClient.js"></script>
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+    <script type="text/javascript" src="ecoLeaderboard.js"></script>
+	
+</body>
+</html>
