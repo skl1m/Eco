@@ -1,44 +1,45 @@
-var dataResult;
+//Initialize new API client
 var apigClient = apigClientFactory.newClient();
 
-function sustainableHome(){
-var formData = {
-'TableName': "material"
-};
+//Function to display an ordered list of recycling information from DynamoDB in HTML
+function recycling_info(){
+    //Pass table name as parameters to API
+    var formData = {
+      'TableName': "material"
+    };
+    var params = {
+      'TableName': "material",
+    };
+    var body = {
+    };
+    var additionalParams = {
+    headers :{
+    },
+    queryParams: {
+      'TableName': "material"
+    }
+  };
 
-var params = {'TableName': "material",
-};
-var body = {
-
-};
-var additionalParams = {
-headers :{},
-queryParams: {'TableName': "material"
-}
-};
-
-var resultStr = "<ol>";
-
-apigClient.ecowebresourceGet(params, body, additionalParams)
-.then(function(result){
-console.log(result.data);
-console.log(result.data.Items);
-
-console.log("after log for result.");
-dataResult = result.data;
-console.log(resultStr);
-result.data.Items.forEach(function(item){
-
-  resultStr =   resultStr + "<br><li>" +  item.instruction + "</li>";
+  //Create a string for the opening tag for an HTML ordered list 
+  var resultStr = "<ol>";
   
-  return resultStr + "</ol>";
-});
-console.log("after log for resultStr.");
-document.getElementById("demo").innerHTML = resultStr;
-}).catch(function (result){
-var error = "data not available";
-});
-return resultStr;
-};
+  //Call API to get recycling material information from database table
+  apigClient.ecowebresourceGet(params, body, additionalParams)
+  //This is where we put a success callback
+  .then(function(result){
+  dataResult = result.data;
+  //Loop through each item and surrounded with list tags and closing ordered list tag to display in HTML
+  result.data.Items.forEach(function(item){
 
-document.getElementById("demo").innerHTML = sustainableHome();
+    resultStr =   resultStr + "<br><li>" +  item.instruction + "</li>";
+    return resultStr + "</ol>";
+  });
+  //Display the values in an HTML table in a paragraph tag labeled as "demo
+  document.getElementById("demo").innerHTML = resultStr;
+    
+  //This is where we put an error callback
+  }).catch(function (result){
+  var error = "Sorry! Data is not available";
+  });
+  return resultStr;
+};
