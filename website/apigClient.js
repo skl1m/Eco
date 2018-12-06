@@ -1,5 +1,8 @@
 /*
  * To configure the API Gateway
+ auto generated file from AWS APIGateway is interacting with APIGateway and s3 bucket.
+ 
+ uploaded and used by Maulik Patel.
  */
 
 var apigClientFactory = {};
