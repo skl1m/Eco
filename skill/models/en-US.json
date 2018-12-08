@@ -1,0 +1,381 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "eco pal",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "End eco pal.",
+                        "Please stop eco pal.",
+                        "Can you stop eco pal.",
+                        "Stop eco pal."
+                    ]
+                },
+                {
+                    "name": "ChallengesIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.US_FIRST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "my name is {name}",
+                        "{name}",
+                        "give me the challenge",
+                        "challenge",
+                        "I want to do a challenge"
+                    ]
+                },
+                {
+                    "name": "RandomEcoTipIntent",
+                    "slots": [],
+                    "samples": [
+                        "Can I have a random eco tip",
+                        "Give me a random eco tip",
+                        "What is a random way I can be more sustainable",
+                        "What's a random way I can be more sustainable",
+                        "Random eco tip.",
+                        "Random sustainability tips.",
+                        "Any random sustainability tips",
+                        "I'd like a random tip to be more sustainable.",
+                        "May I have a random eco tip.",
+                        "May I have a random eco-friendly tip.",
+                        "Random eco tip please.",
+                        "I want a random eco-friendly tip.",
+                        "Give me a random sustainability tip. ",
+                        "I want a random eco tip.",
+                        "Give me a random eco tip.",
+                        "I want a random sustainability tip."
+                    ]
+                },
+                {
+                    "name": "TipLocationRecommendationIntent",
+                    "slots": [
+                        {
+                            "name": "place",
+                            "type": "place"
+                        }
+                    ],
+                    "samples": [
+                        "Give me a sustainability {place} tip",
+                        "Give me an eco-friendly {place} tip",
+                        "I want a {place} sustainability tip",
+                        "Find a sustainability tip for {place}",
+                        "I want to find out how to be more sustainable at {place}",
+                        "I want to learn how to be more sustainable at {place}",
+                        "Random eco {place} tip.",
+                        "I'd like a {place} eco-conscious tip.",
+                        "Can I have a {place} eco tip ",
+                        "What are some ways I can be more environmentally-friendly at {place}",
+                        "{place} tip.",
+                        "Random eco {place}",
+                        "I want another {place} tip.",
+                        "Give me a {place} tip.",
+                        "I want a random {place} sustainability tip."
+                    ]
+                },
+                {
+                    "name": "RecycleRecommendationIntent",
+                    "slots": [
+                        {
+                            "name": "material",
+                            "type": "material"
+                        }
+                    ],
+                    "samples": [
+                        "Is {material} recyclable",
+                        "Is {material} compostable",
+                        "Is {material} garbage",
+                        "Is {material} donatable",
+                        "Are {material} recyclable",
+                        "Are {material} compostable",
+                        "Are {material} donatable",
+                        "Can I throw {material} in the garbage",
+                        "Can I recycle a {material}",
+                        "How do I recycle a {material}",
+                        "How do I dispose of {material}",
+                        "How do I properly dispose of {material}",
+                        "Can I throw away {material} in the garbage",
+                        "Can I throw away {material} in the recycling bin",
+                        "Can I throw away {material} in the compost bin",
+                        "Can I donate {material}",
+                        "I would like to recycle {material}",
+                        "Can I recycle {material}",
+                        "What do I do with {material}",
+                        "How do I recycle {material}",
+                        "I want to recycle {material}"
+                    ]
+                },
+                {
+                    "name": "RandomEcoFactIntent",
+                    "slots": [],
+                    "samples": [
+                        "Random eco fact",
+                        "Give me a random fact",
+                        "Give me a random eco fact",
+                        "Why should sustainability even matter to me",
+                        "Give me a reason I should care about sustainability",
+                        "Give me a reason I should care about our planet",
+                        "Why should I care about sustainability"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "place",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "work",
+                                "synonyms": [
+                                    "office",
+                                    "job",
+                                    "work place"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "school",
+                                "synonyms": [
+                                    "elementary school",
+                                    "middle school",
+                                    "high school",
+                                    "university",
+                                    "college",
+                                    "academy",
+                                    "institution"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "home",
+                                "synonyms": [
+                                    "home",
+                                    "house"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "material",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cutlery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tissue"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kleenex"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "window"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pyrex"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mirrors",
+                                "synonyms": [
+                                    "mirror"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hangers"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "chopsticks"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "wood"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "styrofoam"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hair"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pencils"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pens"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "batteries",
+                                "synonyms": [
+                                    "battery"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "floss"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bricks"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pipettes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "plexiglass"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cd rom cases",
+                                "synonyms": [
+                                    "cd cases"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dvd cases"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "plastic bottle",
+                                "synonyms": [
+                                    "bottle plastic"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "animal cages"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sticky notes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "post-it"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "phone books"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pendaflex hanging folder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mailer envelopes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "magazines"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "junk mail"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "glossy paper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "file folder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "envelopes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "eggcartons"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cereal boxes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "card board"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "book"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "paper"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
